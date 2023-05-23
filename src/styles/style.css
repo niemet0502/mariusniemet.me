@@ -1,0 +1,35 @@
+body { 
+    background-color: #171717;
+}
+
+.top-nav {
+    /* border: 1px solid rgb(125, 123, 123);  */
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    top: 25px;
+    left: 25px;
+    margin-right: 25px;
+
+
+}
+
+.container {
+    display: flex;
+    height: 95vh;
+}
+
+.container .content { 
+    flex: 1; 
+}
+
+.container .side-nav{ 
+    margin-top: -80px;
+    width: 90px;
+    height: 100%;
+    border: 1px solid rgb(82, 74, 74);
+    position: fixed;
+    left: 25px;
+    top: 104px;
+}
