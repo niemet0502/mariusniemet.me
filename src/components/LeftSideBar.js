@@ -1,5 +1,5 @@
 import React from "react";
-import { BsInstagram, BsLinkedin, BsSpotify } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 
 const LeftSideBar = () => {
@@ -10,7 +10,6 @@ const LeftSideBar = () => {
         <BsLinkedin />
         <FaTwitterSquare />
         <BsInstagram />
-        <BsSpotify />
       </div>
     </div>
   );
