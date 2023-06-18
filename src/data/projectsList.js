@@ -7,6 +7,7 @@ export const projects = [
     article: null,
     source: "https://github.com/niemet0502/mariusniemet.me",
     image: "flowist.png",
+    year: 2023,
   },
   {
     id: 2,
@@ -17,5 +18,6 @@ export const projects = [
     article: "/how-i-built-a-todo-and-note-app",
     source: "https://github.com/niemet0502/Seiri",
     image: "seiri.png",
+    year: 2023,
   },
 ];
