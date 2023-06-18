@@ -18,7 +18,7 @@ const Reads = () => {
 
         <div className="books-container">
           {books.map((book) => (
-            <div className="book-card">
+            <div className="book-card" key={book.id}>
               <a href={book.link} target="_blank" without rel="noreferrer">
                 <img src={`/books/${book.image}`} alt={`${book.title}-cover`} />
                 <span>
