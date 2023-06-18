@@ -4,8 +4,9 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 
+import { books } from "../data/booksList";
+
 const Reads = () => {
-  const cells = Array(12).fill(null);
   return (
     <Layout>
       <div className="page-content">
@@ -16,17 +17,15 @@ const Reads = () => {
         />
 
         <div className="books-container">
-          {cells.map((index, key) => (
+          {books.map((book) => (
             <div className="book-card">
-              <a
-                href="https://www.amazon.fr/Alchemist-Paulo-Coelho/dp/0008283648/ref=sr_1_1?keywords=the+alchemist&qid=1686241491&sprefix=the+alceh%2Caps%2C149&sr=8-1"
-                target="_blank"
-                without
-                rel="noreferrer"
-              >
-                <img src="/books/harrypotter.jpg" alt="harrypotter-cover" />
+              <a href={book.link} target="_blank" without rel="noreferrer">
+                <img src={`/books/${book.image}`} alt={`${book.title}-cover`} />
                 <span>
-                  Harry Potter Books <span className="vote-counter">🔥 3</span>
+                  {book.title}{" "}
+                  {book.stars && (
+                    <span className="vote-counter">🔥 {book.stars}</span>
+                  )}
                 </span>
               </a>
             </div>
