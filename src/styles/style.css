@@ -189,12 +189,15 @@ div {
 .featured-blog-post { 
   margin-top: 50px;
 }
-
-.featured-blog-post .blog-post { 
+.blog-post a {
+  color: white;
+  text-decoration: none;
+}
+.blog-post { 
   border-bottom: 1px solid rgb(118, 118, 116);
 }
 
-.featured-blog-post .blog-post h3 { 
+ .blog-post h3 { 
   font-size: 17px;
 }
 
@@ -509,6 +512,10 @@ ul.experiences-list {
 
 }
 
+.flex.articles{
+  gap: 4%;
+}
+
 .project h3 { 
   margin: 0px;
   padding-bottom: 5px;
@@ -525,3 +532,27 @@ ul.experiences-list {
   text-decoration: underline;
 
 }
+
+/** writings page **/
+.articles { 
+  flex-wrap: wrap;
+}
+
+.article-container {
+  flex-basis: 48%; 
+  flex-grow: 0;
+}
+
+.section-title {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgb(118, 118, 116);
+}
+
+.blog-post a:hover{
+  text-decoration: underline;
+}
+/* .article-container h3 {
+  margin: 10px;
+} */

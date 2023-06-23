@@ -25,8 +25,6 @@ const Writings = ({ data }) => {
     return collection;
   }, [posts]);
 
-  console.log(postsbytopic);
-
   return (
     <Layout>
       <div className="page-content">

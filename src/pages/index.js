@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import * as React from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 import Footer from "../components/Footer";
@@ -6,7 +6,9 @@ import Layout from "../components/Layout";
 import LeftSideBar from "../components/LeftSideBar";
 import { projects } from "../data/projectsList";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const posts = data.posts.nodes;
+
   return (
     <Layout>
       <div className="content">
@@ -34,24 +36,16 @@ const IndexPage = () => {
               <div className="blog-post">
                 <h2>Last articles</h2>
               </div>
-              <div className="blog-post">
-                <h3>Writing Unit Tests for your Nestjs Rest API</h3>
-              </div>
-              <div className="blog-post">
-                <h3>
-                  Building your first Rest API with Nestjs and TypeORM and test
-                  it with Postman
-                </h3>
-              </div>
-              <div className="blog-post">
-                <h3>2022 Year in Review</h3>
-              </div>
-              <div className="blog-post">
-                <h3>DSA 10# Depth-First Search of a Binary Tree</h3>
-              </div>
-              <div className="blog-post">
-                <h3>DSA 11# Graph explained</h3>
-              </div>
+
+              {(posts.slice(0, 5) || []).map((post) => (
+                <div className="blog-post">
+                  <h3>
+                    <Link to={`/${post.frontmatter.slug}`}>
+                      {post.frontmatter.title}
+                    </Link>
+                  </h3>
+                </div>
+              ))}
             </div>
 
             <div className="featured-projects">
@@ -113,5 +107,22 @@ const IndexPage = () => {
     </Layout>
   );
 };
+
+export const blogQuery = graphql`
+  query BlogQuery {
+    posts: allMdx(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        id
+        body
+        frontmatter {
+          title
+          date
+          categorie
+          slug
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
