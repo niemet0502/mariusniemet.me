@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
             <div className="header">
               <div>
                 <h1>Hi, i'm Marius</h1>
-                <h3>Welcome in my little corner on the internet. </h3>
+                <h3>Welcome to my little corner on the internet. </h3>
 
                 <p>
                   I'm a software Engineer and Writer based in Dakar. I{" "}

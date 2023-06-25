@@ -533,6 +533,10 @@ ul.experiences-list {
 
 }
 
+.header a{
+  color: white;
+}
+
 /** writings page **/
 .articles { 
   flex-wrap: wrap;
@@ -553,6 +557,16 @@ ul.experiences-list {
 .blog-post a:hover{
   text-decoration: underline;
 }
-/* .article-container h3 {
-  margin: 10px;
-} */
+
+/** single blog page **/ 
+
+.blog-post-container { 
+  display: flex;
+  min-height: 100vh;
+}
+
+.right-sidebar{
+  max-width: 400px;
+  width: 30%;
+  border-left: 1px solid green;
+}

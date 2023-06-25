@@ -13,7 +13,7 @@ const About = () => {
             <div className="flex-1">
               <p>
                 Hi, my name is Marius, i'm a software engineer and writer from
-                Congo currently living in Dakar Senegal. <br /> Welcome in my
+                Congo currently living in Dakar Senegal. <br /> Welcome to my
                 little corner on the internet. <br /> <br /> I wanted this place
                 to feel like a human being website not only as a engineer one,
                 that why you can find the playlists that i created since i
