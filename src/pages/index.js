@@ -22,11 +22,11 @@ const IndexPage = ({ data }) => {
                 <h3>Welcome in my little corner on the internet. </h3>
 
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  I'm a software Engineer and Writer based in Dakar. I{" "}
+                  <Link to="/creations">build</Link> stuff and{" "}
+                  <Link to="/writings">write</Link> about them. I'm intersted in
+                  Distributed systems, data structure and algorithm. <br />I
+                  like chess, books and formula 1.
                 </p>
               </div>
               <div></div>
