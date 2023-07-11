@@ -110,15 +110,13 @@ const IndexPage = ({ data }) => {
 
 export const blogQuery = graphql`
   query BlogQuery {
-    posts: allMdx(sort: { frontmatter: { date: DESC } }) {
+    posts: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        id
-        body
+        html
         frontmatter {
           title
-          date
-          categorie
           slug
+          date(formatString: "YYYY-MM-DD")
         }
       }
     }
