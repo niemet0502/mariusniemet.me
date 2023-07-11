@@ -13,17 +13,9 @@ module.exports = {
     logo: "https://www.yourdomain.tld/logo.png",
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    `gatsby-plugin-mdx`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        path: `${__dirname}/blog`,
-        extensions: [".mdx", "md"],
-      },
-    },
+    "gatsby-remark-autolink-headers",
+    "gatsby-remark-images",
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -58,6 +50,43 @@ module.exports = {
       options: {
         name: "assets",
         path: `${__dirname}/static/`,
+      },
+    },
+    /**
+     * MARKDOWN
+     */
+    `gatsby-remark-prismjs`,
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          "gatsby-remark-autolink-headers",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 800,
+              backgroundColor: "transparent",
+            },
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: true,
+              },
+            },
+          },
+        ],
       },
     },
   ],
