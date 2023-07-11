@@ -627,3 +627,12 @@ code[class*="language-"], pre[class*="language-"] {
   padding: 60px 30px;
   color: #e6e6e6;
 }
+
+.right-sidebar img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.right-sidebar a {
+  color: white;
+}
