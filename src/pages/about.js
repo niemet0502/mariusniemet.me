@@ -9,7 +9,7 @@ const About = () => {
       <div className="page-content">
         <div className="aboutme-section">
           <h1>About me</h1>
-          <div className="flex">
+          <div className="flex aboutme-section__picture">
             <div className="flex-1">
               <p>
                 Hi, my name is Marius, i'm a software engineer and writer from
@@ -21,7 +21,7 @@ const About = () => {
                 recently read.
               </p>
             </div>
-            <div>
+            <div className="flex">
               <img
                 src="/profile.jpg"
                 className="profile-picture"
