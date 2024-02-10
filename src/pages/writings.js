@@ -1,13 +1,32 @@
 import React from "react";
 
-import { Link, graphql } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { useMemo } from "react";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 
-const Writings = ({ data }) => {
-  const posts = data.posts.nodes;
+const Writings = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            date
+            author
+            description
+            slug
+            categorie
+          }
+          html
+        }
+      }
+    }
+  `);
+
+  console.log(data);
+  const posts = data.allMarkdownRemark.nodes;
   const postsbytopic = useMemo(() => {
     const collection = {};
 
@@ -58,21 +77,5 @@ const Writings = ({ data }) => {
     </Layout>
   );
 };
-
-export const blogQuery = graphql`
-  query BlogQuery {
-    posts: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-      nodes {
-        html
-        frontmatter {
-          title
-          slug
-          date(formatString: "YYYY-MM-DD")
-          categorie
-        }
-      }
-    }
-  }
-`;
 
 export default Writings;
