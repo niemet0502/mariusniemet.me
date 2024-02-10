@@ -13,17 +13,18 @@ module.exports = {
     logo: "https://www.yourdomain.tld/logo.png",
   },
   plugins: [
-    "gatsby-remark-autolink-headers",
-    "gatsby-remark-images",
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/src/blog`,
       },
     },
     `gatsby-transformer-remark`,
+    "gatsby-remark-autolink-headers",
+    "gatsby-plugin-sharp",
+    "gatsby-remark-images",
+    "gatsby-remark-relative-images",
     {
       resolve: "gatsby-source-filesystem",
       options: {
