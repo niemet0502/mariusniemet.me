@@ -1,4 +1,4 @@
-import { Link, graphql } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 import Footer from "../components/Footer";
@@ -6,8 +6,25 @@ import Layout from "../components/Layout";
 import LeftSideBar from "../components/LeftSideBar";
 import { projects } from "../data/projectsList";
 
-const IndexPage = ({ data }) => {
-  const posts = data.posts.nodes;
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            date
+            author
+            description
+            slug
+          }
+          html
+        }
+      }
+    }
+  `);
+
+  const posts = data.allMarkdownRemark.nodes;
 
   return (
     <Layout>
@@ -107,20 +124,5 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
-
-export const blogQuery = graphql`
-  query BlogQuery {
-    posts: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-      nodes {
-        html
-        frontmatter {
-          title
-          slug
-          date(formatString: "YYYY-MM-DD")
-        }
-      }
-    }
-  }
-`;
 
 export default IndexPage;
