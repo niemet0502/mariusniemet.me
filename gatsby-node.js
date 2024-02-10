@@ -9,13 +9,18 @@ const createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-          nodes {
-            html
-            frontmatter {
-              title
-              slug
-              date(formatString: "YYYY-MM-DD")
+        allMarkdownRemark {
+          edges {
+            node {
+              html
+              headings {
+                depth
+                value
+              }
+              frontmatter {
+                # Assumes you're using title in your frontmatter.
+                title
+              }
             }
           }
         }
@@ -27,7 +32,9 @@ const createPages = async ({ graphql, actions }) => {
     throw result.errors;
   }
 
-  const all = result.data.allMarkdownRemark.nodes;
+  console.log(result);
+
+  const all = result.allMarkdownRemark.nodes;
 
   all.forEach((post, i) => {
     createPage({
