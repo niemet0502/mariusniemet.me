@@ -6,42 +6,30 @@ const createPages = async ({ graphql, actions }) => {
 
   const blogPage = path.resolve("./src/templates/post.js");
 
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              html
-              headings {
-                depth
-                value
-              }
-              frontmatter {
-                # Assumes you're using title in your frontmatter.
-                title
-              }
+  const result = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              slug
             }
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   if (result.errors) {
     throw result.errors;
   }
 
-  console.log(result);
-
-  const all = result.allMarkdownRemark.nodes;
-
-  all.forEach((post, i) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: post.frontmatter.slug,
+      path: node.frontmatter.slug,
       component: blogPage,
       context: {
-        slug: post.frontmatter.slug,
+        slug: node.frontmatter.slug,
       },
     });
   });
