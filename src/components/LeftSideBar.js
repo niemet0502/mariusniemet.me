@@ -6,19 +6,32 @@ const LeftSideBar = () => {
   return (
     <div className="left-nav">
       <div className="">
-        <a href="https://github.com/niemet0502" target="_blank">
+        <a
+          href="https://github.com/niemet0502"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaGithubSquare />
         </a>
         <a
           href="https://www.linkedin.com/in/marius-vincent-niemet-928b48182/"
           target="_blank"
+          rel="noreferrer"
         >
           <BsLinkedin />
         </a>
-        <a href="https://twitter.com/mariusniemet05" target="_blank">
+        <a
+          href="https://twitter.com/mariusniemet05"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaTwitterSquare />
         </a>
-        <a href="" target="_blank">
+        <a
+          href="https://instagram.com/mariusniemet05"
+          target="_blank"
+          rel="noreferrer"
+        >
           <BsInstagram />
         </a>
       </div>
