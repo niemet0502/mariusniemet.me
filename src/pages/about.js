@@ -47,6 +47,7 @@ const About = () => {
                   <li> DBMS: MySQL, PostgreSQL </li>
                   <li> Infrastructure: Docker, Kubernetes </li>
                   <li> Messaging: Redis Pub/Sub</li>
+                  <li> Cloud provider: AWS</li>
                   <li>
                     Monitoring: Grafana stack (Loki, Tempo, Grafana, Promtail),
                     OpenTelemetry, Prometheus
