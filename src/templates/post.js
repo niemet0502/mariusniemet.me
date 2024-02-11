@@ -29,10 +29,10 @@ export default function PostTemplate({ data }) {
 
             <p>
               Hi I'm <Link to="/about">Marius</Link> <br />
-              Welcome to my little corner on the internet. <br />
               I'm a software Engineer and Writer based in Dakar. I build stuff
               and write about them. I'm intersted in Distributed systems, data
               structure and algorithm. <br />I like chess, books and formula 1.
+              Welcome to my little corner on the internet. <br />
             </p>
           </div>
         </div>

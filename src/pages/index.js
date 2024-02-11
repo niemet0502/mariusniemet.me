@@ -39,11 +39,9 @@ const IndexPage = () => {
                 <h3>Welcome to my little corner on the internet. </h3>
 
                 <p>
-                  I'm a software Engineer and Writer based in Dakar. I{" "}
-                  <Link to="/creations">build</Link> stuff and{" "}
-                  <Link to="/writings">write</Link> about them. I'm intersted in
-                  Distributed systems, data structure and algorithm. <br />I
-                  like chess, books and formula 1.
+                  A Congolese software Engineer and Writer based in Dakar,
+                  Senegal. I <Link to="/creations">build</Link> stuff and{" "}
+                  <Link to="/writings">write</Link> about them.
                 </p>
               </div>
               <div></div>

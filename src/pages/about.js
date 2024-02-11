@@ -12,13 +12,13 @@ const About = () => {
           <div className="flex aboutme-section__picture">
             <div className="flex-1">
               <p>
-                Hi, my name is Marius, i'm a software engineer and writer from
-                Congo currently living in Dakar Senegal. <br /> Welcome to my
-                little corner on the internet. <br /> <br /> I wanted this place
-                to feel like a human being website not only as a engineer one,
-                that why you can find the playlists that i created since i
-                really love music and you can also find here the things i have
-                recently read.
+                Hi i'm Marius a Congolese software engineer and writer living in
+                Dakar Senegal. <br /> I wanted this place to feel like a human
+                being website not only as a engineer one, that why you can find
+                my playlists and reads since i'm a music and books lover.
+                <br /> I sometimes write about what I've learned in my
+                day-to-day work, experiences, or something that interests me to
+                improve my knowledge base. <br />
               </p>
             </div>
             <div className="flex">
@@ -32,28 +32,25 @@ const About = () => {
           <div>
             <div>
               <p>
-                I sometimes write about what I've learned in my day-to-day work,
-                experiences, or something that interests me to improve my
-                knowledge base.
                 <br />
-                <br />
-                On a daily basis I build products for my own needs or for my
-                employer and i like and enjoy it, I can work on the entire stack
-                from the database design, to the frontend and backend. I take
-                end-to-end ownership across all areas of the software
-                development lifecycle, including: designing, building,
-                releasing, and monitoring.
+                Daily I build products for my own needs or my employer and I
+                like and enjoy it. I can work on the entire stack from the
+                database design, to the frontend, backend and take end-to-end
+                ownership across all areas of the software development
+                lifecycle, including: designing, building, releasing, and
+                monitoring.
                 <br />
                 <br />
                 To do all those things I use:
                 <ul>
-                  <li>Languages: Javascript (Typescript), Java</li>
-                  <li>Framework: React, Nestjs, ExpressJs, Spring-boot</li>
-                  <li> DBMS: MySQL, PostgreSQL, MongoDB </li>
+                  <li>Languages: Javascript (Typescript), Java, Go</li>
+                  <li> DBMS: MySQL, PostgreSQL </li>
                   <li> Infrastructure: Docker, Kubernetes </li>
-                  <li> Caching: Redis</li>
-                  <li> Messaging: Kafka</li>
-                  <li>Monitoring:</li>
+                  <li> Messaging: Redis Pub/Sub</li>
+                  <li>
+                    Monitoring: Grafana stack (Loki, Tempo, Grafana, Promtail),
+                    OpenTelemetry, Prometheus
+                  </li>
                 </ul>
               </p>
 
