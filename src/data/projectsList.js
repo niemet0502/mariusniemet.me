@@ -6,7 +6,7 @@ export const projects = [
     demo: null,
     article: null,
     source: "https://github.com/niemet0502/mariusniemet.me",
-    image: "flowist.png",
+    image: "mariusniemet.png",
     year: 2023,
   },
   {
