@@ -9,7 +9,7 @@ import { projects } from "../data/projectsList";
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         nodes {
           frontmatter {
             title

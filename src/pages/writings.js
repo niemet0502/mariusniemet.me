@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 const Writings = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         nodes {
           frontmatter {
             title
