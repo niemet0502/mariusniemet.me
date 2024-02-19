@@ -9,7 +9,10 @@ import Layout from "../components/Layout";
 const Writings = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { published: { eq: true } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
         nodes {
           frontmatter {
             title
@@ -57,7 +60,7 @@ const Writings = () => {
         <div className="flex articles">
           {Object.keys(postsbytopic).map((key) => (
             <div className="article-container">
-              <h3 className="section-title">{key}</h3>
+              <h3 className="section-title">{key.replaceAll("-", " ")}</h3>
 
               {postsbytopic[key].map((post) => (
                 <div className="blog-post" key={post.id}>

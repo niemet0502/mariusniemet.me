@@ -9,7 +9,10 @@ import { projects } from "../data/projectsList";
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { published: { eq: true } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
         nodes {
           frontmatter {
             title
