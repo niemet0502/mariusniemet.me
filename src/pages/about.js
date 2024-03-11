@@ -75,11 +75,13 @@ const About = () => {
 
           <div>
             <h1>What I'm doing now</h1>
-            <span className="italic">Updated June 15th, 2023</span>
+            <span className="italic">Updated March 11th, 2023</span>
 
             <ul>
-              <li>Reading Bersek currently on the second Volume</li>
-              <li>Reading the Harry potter serie current on the 5th Book</li>
+              <li>Reading Hunger games the 2nd book</li>
+              <li>Reading Distributed systems with Nodejs</li>
+              <li>Playing the Last of us part 1</li>
+              <li>Writing about Docker and containerization</li>
             </ul>
           </div>
 
