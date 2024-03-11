@@ -512,7 +512,7 @@ h4 {
 
 .books-container .book-card {
   border: 1px solid rgb(118, 118, 116);
-  width: 250px;
+  width: 200px;
   margin: 0px;
 
   min-width: 200px;
@@ -532,8 +532,8 @@ h4 {
 }
 
 .books-container .book-card img {
-  width: 210px;
-  height: 290px;
+  width: 180px;
+  height: 220px;
 }
 
 .books-container .book-card span {
