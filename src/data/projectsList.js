@@ -14,8 +14,8 @@ export const projects = [
     name: "seiri",
     description:
       " Seirir is an app that allows you to manage your tasks and notes in the same place for free without switching between multiples products",
-    demo: "https://github.com/niemet0502/Seiri",
-    article: "/how-i-built-a-todo-and-note-app",
+    demo: "https://seiri.mariusniemet.me/",
+    article: "/building-seiri-my-tasks-notes-app",
     source: "https://github.com/niemet0502/Seiri",
     image: "seiri.png",
     year: 2023,
