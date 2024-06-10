@@ -78,10 +78,9 @@ const About = () => {
             <span className="italic">Updated March 11th, 2023</span>
 
             <ul>
-              <li>Reading Hunger games the 2nd book</li>
-              <li>Reading Distributed systems with Nodejs</li>
-              <li>Playing the Last of us part 1</li>
-              <li>Writing about Docker and containerization</li>
+              <li>Reading Happy Potter 6th book</li>
+              <li>Reading System Design Interview</li>
+              <li>Writing SpringBoot and Kubernetes</li>
             </ul>
           </div>
 
