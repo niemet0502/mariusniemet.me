@@ -11,7 +11,7 @@ const Projects = () => {
       <div className="page-content">
         <Hero
           title="Projects"
-          content="The things that i have created mostly related to software."
+          content="I love building stuff in my spare time I find it the best way to explore new topics, learn, and continue to grow as an engineer. You'll see that it is mostly web-oriented. "
         />
       </div>
       <div className="projects-section">
@@ -19,8 +19,13 @@ const Projects = () => {
           <div className="project-container">
             <div className="project flex gap-10">
               <div className="flex flex-1 flex-column">
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
+                <h3>
+                  {project.name} <span>{project.date}</span>
+                </h3>
+                <div>
+                  <p>{project.description}</p>
+                  <p>{project.subtitle}</p>
+                </div>
 
                 <div className="footer">
                   <ul>

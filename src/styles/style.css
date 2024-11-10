@@ -609,19 +609,17 @@ ul.experiences-list {
 
 .projects-section {
   padding: 5px 25px;
-  align-self: center;
   margin-top: 50px;
 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .project-container {
-  flex-basis: 49%;
-  flex-grow: 0;
+  flex: 1;
 
   display: flex;
-
   justify-content: center;
 }
 
@@ -633,16 +631,16 @@ ul.experiences-list {
 
 .project {
   margin: 10px;
-  max-width: 780px;
+  max-width: 1152px;
 
   width: 100%;
+
+  justify-content: space-between;
 }
 
 .project p {
   font-size: 14px;
   color: rgb(164, 162, 162);
-
-  min-height: 110px;
 }
 
 .project img {
@@ -660,6 +658,11 @@ ul.experiences-list {
   padding: 0px;
 
   margin-top: 0px;
+}
+
+.project h3 span {
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .project .footer ul li {
