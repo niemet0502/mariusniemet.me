@@ -23,21 +23,27 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/writings">
+                <Link to="/articles">
                   <span className="page-number">02.</span>
-                  <span className="link">Writings</span>
+                  <span className="link">Articles</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/notes">
+                  <span className="page-number">03.</span>
+                  <span className="link">Notes</span>
                 </Link>
               </li>
               <li>
                 <Link to="/reads">
-                  <span className="page-number">03.</span>
-                  <span className="link">Reads</span>
+                  <span className="page-number">04.</span>
+                  <span className="link">Read Log</span>
                 </Link>
               </li>
               <li>
-                <Link to="/creations">
-                  <span className="page-number">04.</span>
-                  <span className="link">Creations</span>
+                <Link to="/projects">
+                  <span className="page-number">05.</span>
+                  <span className="link">Projects</span>
                 </Link>
               </li>
             </ul>
@@ -58,21 +64,27 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/writings">
+              <Link to="/articles">
                 <span className="page-number">02.</span>
-                <span className="link">Writings</span>
+                <span className="link">Articles</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/notes">
+                <span className="page-number">03.</span>
+                <span className="link">Notes</span>
               </Link>
             </li>
             <li>
               <Link to="/reads">
-                <span className="page-number">03.</span>
-                <span className="link">Reads</span>
+                <span className="page-number">04.</span>
+                <span className="link">Read Log</span>
               </Link>
             </li>
             <li>
-              <Link to="/creations">
-                <span className="page-number">04.</span>
-                <span className="link">Creations</span>
+              <Link to="/projects">
+                <span className="page-number">05.</span>
+                <span className="link">Projects</span>
               </Link>
             </li>
           </ul>

@@ -5,12 +5,12 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import { projects } from "../data/projectsList";
 
-const Creations = () => {
+const Projects = () => {
   return (
     <Layout>
       <div className="page-content">
         <Hero
-          title="Creations"
+          title="Projects"
           content="The things that i have created mostly related to software."
         />
       </div>
@@ -69,4 +69,4 @@ const Creations = () => {
   );
 };
 
-export default Creations;
+export default Projects;

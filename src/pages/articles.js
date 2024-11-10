@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 
-const Writings = () => {
+const Articles = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -81,4 +81,4 @@ const Writings = () => {
   );
 };
 
-export default Writings;
+export default Articles;

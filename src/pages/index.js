@@ -43,8 +43,8 @@ const IndexPage = () => {
 
                 <p>
                   A Congolese software Engineer and Writer based in Dakar,
-                  Senegal. I <Link to="/creations">build</Link> stuff and{" "}
-                  <Link to="/writings">write</Link> about them.
+                  Senegal. I <Link to="/projects">build</Link> stuff and{" "}
+                  <Link to="/articles">write</Link> about them.
                 </p>
               </div>
               <div></div>
@@ -67,7 +67,7 @@ const IndexPage = () => {
             </div>
 
             <div className="featured-projects">
-              <h2>Featured creations</h2>
+              <h2>Projects</h2>
 
               {projects.map((project) => (
                 <div className="project-card">
