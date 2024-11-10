@@ -26,9 +26,9 @@
 
 body {
   background-color: #171717;
+  color: white;
   padding: 0px;
   margin: 0px;
-  color: white;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     Arial, sans-serif;
   line-height: 1.6;
@@ -321,12 +321,25 @@ div::-webkit-scrollbar-thumb {
   font-size: 17px;
 }
 
+.blog-post-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-post-link__date {
+  font-weight: normal;
+  font-size: 14px;
+}
+
 /* home page => featured projects */
 
 .featured-projects {
-  margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.featured-projects__title {
+  margin-bottom: 0px;
 }
 
 .featured-projects h2 {
@@ -335,9 +348,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .project-card {
-  width: 60%;
-  max-width: 600px;
-  align-self: flex-end;
+  flex: 0 0 48%;
   padding-bottom: 30px;
   border-bottom: 1px solid rgb(118, 118, 116);
 }
@@ -398,13 +409,13 @@ div::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 1180px) {
   .project-card {
-    width: 70%;
+    flex: 0 0 100%;
   }
 }
 
 @media screen and (max-width: 680px) {
   .project-card {
-    width: 100%;
+    flex: 0 0 100%;
   }
 }
 /** Footer **/

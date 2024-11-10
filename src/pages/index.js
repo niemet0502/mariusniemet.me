@@ -1,10 +1,10 @@
 import { Link, graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
-import { AiTwotoneStar } from "react-icons/ai";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import LeftSideBar from "../components/LeftSideBar";
 import { projects } from "../data/projectsList";
+import { transformDateToMonthYearLetter } from "../utils/Date";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -39,12 +39,17 @@ const IndexPage = () => {
             <div className="header">
               <div>
                 <h1>Hi, i'm Marius</h1>
-                <h3>Welcome to my little corner on the internet. </h3>
 
                 <p>
-                  A Congolese software Engineer and Writer based in Dakar,
-                  Senegal. I <Link to="/projects">build</Link> stuff and{" "}
-                  <Link to="/articles">write</Link> about them.
+                  I'm a Congolese Software Engineer living in Dakar, Senegal.
+                </p>
+
+                <p>
+                  On this site, you can check out all the{" "}
+                  <Link to="/projects">technical articles</Link> I've written,
+                  read some of my <Link to="/notes">personal notes</Link>, the{" "}
+                  <Link to="/reads">books</Link> I've read, or learn more{" "}
+                  <Link to="/reads">about me.</Link>
                 </p>
               </div>
               <div></div>
@@ -52,30 +57,34 @@ const IndexPage = () => {
 
             <div className="featured-blog-post">
               <div className="blog-post">
-                <h2>Last articles</h2>
+                <h2>Articles</h2>
               </div>
 
               {(posts.slice(0, 5) || []).map((post) => (
                 <div className="blog-post">
                   <h3>
                     <Link to={`/${post.frontmatter.slug}`}>
-                      {post.frontmatter.title}
+                      <div className="blog-post-link">
+                        <span>{post.frontmatter.title}</span>
+                        <span className="blog-post-link__date">
+                          {transformDateToMonthYearLetter(
+                            post.frontmatter.date
+                          )}
+                        </span>
+                      </div>
                     </Link>
                   </h3>
                 </div>
               ))}
             </div>
 
+            <h2 className="featured-projects__title">Projects</h2>
             <div className="featured-projects">
-              <h2>Projects</h2>
-
               {projects.map((project) => (
                 <div className="project-card">
                   <div className="header">
                     <h3>{project.name}</h3>
-                    <span>
-                      {project.year} - 2 <AiTwotoneStar />
-                    </span>
+                    <span>{project.year}</span>
                   </div>
                   <div className="body">
                     <p>{project.description}</p>

@@ -29,6 +29,6 @@ export const projects = [
     article: null,
     source: "https://github.com/niemet0502/guma",
     image: "guma.png",
-    year: 2023,
+    year: 2024,
   },
 ];
