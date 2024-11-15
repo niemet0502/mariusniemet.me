@@ -315,6 +315,8 @@ div::-webkit-scrollbar-thumb {
 }
 .blog-post {
   border-bottom: 1px solid rgb(118, 118, 116);
+  align-items: center;
+  justify-content: space-between;
 }
 
 .blog-post h3 {
@@ -715,7 +717,12 @@ ul.experiences-list {
 
 /** writings page **/
 .articles {
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+.articles-container {
+  justify-content: center;
 }
 
 .article-container {
