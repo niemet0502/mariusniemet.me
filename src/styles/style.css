@@ -537,11 +537,12 @@ h4 {
 }
 
 .books-container .book-card {
-  border: 1px solid rgb(118, 118, 116);
+  /* border: 1px solid rgb(118, 118, 116); */
   width: 200px;
   margin: 0px;
 
   min-width: 200px;
+  background-color: rgb(51, 51, 51);
 
   padding: 20px;
 }

@@ -15,8 +15,8 @@ const Reads = () => {
 
       <div className="page-content">
         <Hero
-          title="Reads"
-          content="The things that I have read and I think can be useful, it can be 
+          title="Read Log"
+          content="The things that I have read and I think can be useful,
           technical books, science-fiction, personal development or manga."
         />
 

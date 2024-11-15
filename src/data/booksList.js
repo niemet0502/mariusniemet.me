@@ -41,4 +41,25 @@ export const books = [
     stars: null,
     link: "https://www.amazon.com/Joueur-d%C3%A9checs-nouvelle-traduction-Litt%C3%A9rature-ebook/dp/B00UOLADRU/ref=sr_1_3?crid=467F5PYRXGX9&dib=eyJ2IjoiMSJ9.m3RSOWgQPOS4tf3Zd9DoVMRM1IJFEHJN4rGJJtvLDSI43NbKOqibKPqC3PI8lMSWK-qo8UxXBSXaLLVtZ7ZIr1dN-ooh55qJNdXEUX30se8GtvnPObuKHdeBJ0veEeuI6lEYBPyB3Ld4Mt29MviMrYEadE7zM8BfwrHvnxFy_IYV1TihJz46H-srmj3Q0EH7J071JG1ZFJvlMbcb_tMunLJJ1mDor4B5excuG1XiY24.6iJvq-XqhsANg2y0Kws5jH_2PjbgFu4u-7Yvgr56VbQ&dib_tag=se&keywords=le+joueur+d%27echecs+stefan+zweig&qid=1710197398&sprefix=Le+joueur+%2Caps%2C225&sr=8-3",
   },
+  {
+    id: 7,
+    title: "System Design Interview",
+    image: "system-design-interview.jpg",
+    stars: null,
+    link: "https://www.amazon.com/System-Design-Interview-Insiders-Guide/dp/1736049119",
+  },
+  {
+    id: 8,
+    title: "kimetsu no yaiba",
+    image: "kimestu-no-aiba.jpg",
+    stars: null,
+    link: "https://www.amazon.com/Demon-Slayer-Complete-Box-Set/dp/1974725952/ref=sr_1_1?crid=KAWXQ5H24DG0&dib=eyJ2IjoiMSJ9.fR9FFMhFVWy6FU1TGhyEv7wgeIgMRRoqGLm0YtLcVFvYqete5AMKfuqAmGSMQIVthkgslRzBxBAi3Pqu-vxBhhMByzIJdSG4DCd8w5gVGU4TkH_p66gRb0roTHT-wdpDEgd9bANRCxzorJ3UnLxdFtP3lt06fc6akZhPwg0lOpcnsPCWcKy4Yyl5WvRbrD8VN9IoMOKx42IovgjmxT6xUhQt9G6dCAwbSq0pFSB84yQ.GA9PTK-htNAVkspoKq4nWVMaE9b_vJC15U3oNzOTaIw&dib_tag=se&keywords=kimetsu+no+yaiba&qid=1731696282&s=books&sprefix=kime%2Cstripbooks-intl-ship%2C224&sr=1-1",
+  },
+  {
+    id: 9,
+    title: "Understanding Kubernetes in a visual way:",
+    image: "kubernetes.jpg",
+    stars: null,
+    link: "https://www.amazon.com/Understanding-Kubernetes-visual-way-sketchnotes/dp/B0BB619188/ref=sr_1_1?crid=1AIUVJ8IFMCXT&dib=eyJ2IjoiMSJ9.H6596gYVYSG0TEA9CJiEUs3JwQs5pPTkkhijzLvG5tI.zu-c8t0bYnWg0SplD1Ft6N0t1xELiqUfpZETFgCpjos&dib_tag=se&keywords=understanding+kubernetes+in+a+visual+way&qid=1731696384&s=books&sprefix=understandin+kubernetes+in+a+visual+way%2Cstripbooks-intl-ship%2C193&sr=1-1",
+  },
 ];
