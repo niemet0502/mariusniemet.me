@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import LeftSideBar from "../components/LeftSideBar";
+import { SEO } from "../components/Seo";
 import { projects } from "../data/projectsList";
 import { transformDateToMonthYearLetter } from "../utils/Date";
 import config from "../utils/config";
@@ -34,6 +35,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Helmet title={config.siteTitle} />
+      <SEO />
       <div className="content">
         <LeftSideBar />
 
