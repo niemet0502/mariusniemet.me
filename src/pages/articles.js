@@ -1,10 +1,13 @@
 import React from "react";
 
 import { graphql, Link, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import { SEO } from "../components/Seo";
 import { transformDateToMonthYearLetter } from "../utils/Date";
+import config from "../utils/config";
 
 const Articles = () => {
   const data = useStaticQuery(graphql`
@@ -29,9 +32,14 @@ const Articles = () => {
   `);
 
   const posts = data.allMarkdownRemark.nodes;
+  const description =
+    "The things i have wrote on engineering, infrastructure, backend or frontend also about life in general.";
 
   return (
     <Layout>
+      <Helmet title={`${config.siteTitle} - Articles`} />
+      <SEO customDescription={description} />
+
       <div className="page-content">
         <Hero
           title="Articles"

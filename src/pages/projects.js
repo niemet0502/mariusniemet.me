@@ -1,13 +1,21 @@
 import { Link } from "gatsby";
 import React from "react";
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import { SEO } from "../components/Seo";
 import { projects } from "../data/projectsList";
+import config from "../utils/config";
 
 const Projects = () => {
+  const description = "Open source projects i have built";
+
   return (
     <Layout>
+      <Helmet title={`${config.siteTitle} - Projects`} />
+      <SEO customDescription={description} />
+
       <div className="page-content">
         <Hero
           title="Projects"

@@ -1,10 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+import config from "../utils/config";
 
 const About = () => {
   return (
     <Layout>
+      <Helmet title={`${config.siteTitle} - About`} />
+
       <div className="page-content">
         <div className="aboutme-section">
           <h1>About me</h1>

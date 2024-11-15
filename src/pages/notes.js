@@ -1,9 +1,12 @@
 import React from "react";
 
 import { graphql, Link, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import { SEO } from "../components/Seo";
+import config from "../utils/config";
 import { transformDateToMonthYearLetter } from "../utils/Date";
 
 const Notes = () => {
@@ -30,8 +33,14 @@ const Notes = () => {
 
   const posts = data.allMarkdownRemark.nodes;
 
+  const description =
+    "Personal notes about life, music, art, projects, and everything else I want to write about.";
+
   return (
     <Layout>
+      <Helmet title={`${config.siteTitle} - Notes`} />
+      <SEO customDescription={description} />
+
       <div className="page-content">
         <Hero
           title="Notes"

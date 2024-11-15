@@ -1,12 +1,20 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
+import { SEO } from "../components/Seo";
+import config from "../utils/config";
 
 export default function PostTemplate({ data }) {
+  const post = data.markdownRemark;
+
   const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
+      <Helmet title={`${config.siteTitle} - ${frontmatter.title}`} />
+      <SEO postPath={frontmatter.slug} postNode={post} postSEO />
+
       <div className="page-content">
         <div className="blog-post-container">
           <div className="flex-1 post-content">

@@ -1,10 +1,12 @@
 import { Link, graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import LeftSideBar from "../components/LeftSideBar";
 import { projects } from "../data/projectsList";
 import { transformDateToMonthYearLetter } from "../utils/Date";
+import config from "../utils/config";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -31,6 +33,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <Helmet title={config.siteTitle} />
       <div className="content">
         <LeftSideBar />
 
