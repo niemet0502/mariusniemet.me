@@ -485,6 +485,15 @@ div::-webkit-scrollbar-thumb {
   color: #e6e6e6;
 }
 
+.education__item .flex {
+  align-items: center;
+  gap: 50px;
+}
+
+.education__item .flex span {
+  font-style: italic;
+}
+
 h1,
 h2,
 h3,
@@ -502,10 +511,10 @@ h4 {
     flex-direction: column-reverse;
   }
 }
-.profile-picture {
+/* .profile-picture {
   width: 180px;
   height: 180px;
-}
+} */
 
 /** reads page **/
 
@@ -840,4 +849,12 @@ pre[class*="language-"] {
   body p {
     font-size: 18px;
   }
+}
+
+.float-right {
+  float: right;
+  margin-left: 16px; /* Add some space between text and image */
+  /* width: 150px; Adjust as needed */
+  height: auto;
+  width: 300px;
 }

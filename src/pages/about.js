@@ -5,131 +5,150 @@ import Layout from "../components/Layout";
 const About = () => {
   return (
     <Layout>
-      {/* <LeftSideBar /> */}
       <div className="page-content">
         <div className="aboutme-section">
           <h1>About me</h1>
+
           <div className="flex aboutme-section__picture">
-            <div className="flex-1">
-              <p>
-                Hi i'm Marius a Congolese software engineer and writer living in
-                Dakar Senegal. <br /> I wanted this place to feel like a human
-                being website not only as a engineer one, that why you can find
-                my playlists and reads since i'm a music and books lover.
-                <br /> I sometimes write about what I've learned in my
-                day-to-day work, experiences, or something that interests me to
-                improve my knowledge base. <br />
-              </p>
-            </div>
-            <div className="flex">
-              <img
-                src="/profile.jpg"
-                className="profile-picture"
-                alt="profile"
-              />
-            </div>
-          </div>
-          <div>
-            <div>
-              <p>
-                <br />
-                Daily I build products for my own needs or my employer and I
-                like and enjoy it. I can work on the entire stack from the
-                database design, to the frontend, backend and take end-to-end
-                ownership across all areas of the software development
-                lifecycle, including: designing, building, releasing, and
-                monitoring.
-                <br />
-                <br />
-                To do all those things I use:
-                <ul>
-                  <li>Languages: Javascript (Typescript), Java, Go</li>
-                  <li> DBMS: MySQL, PostgreSQL </li>
-                  <li> Infrastructure: Docker, Kubernetes </li>
-                  <li> Messaging: Redis Pub/Sub</li>
-                  <li> Cloud provider: AWS</li>
-                  <li>
-                    Monitoring: Grafana stack (Loki, Tempo, Grafana, Promtail),
-                    OpenTelemetry, Prometheus
-                  </li>
-                </ul>
-              </p>
-
-              <p>
-                Outside of building and writing, I enjoy: <br />
-                <ul>
-                  <li> Reading books technical or not</li>
-                  <li> Playing guitar, chess, and piano</li>
-                  <li> Watching manga, basketball, and Formula 1</li>
-                  <li> Spending quality time with people I love</li>
-                </ul>
-              </p>
-
-              <p>
-                <br />
-                If you have a question or just want to say hi, feel free to
-                reach out over email or find me on any social media.
-              </p>
-            </div>
+            <p>
+              <img src="/profile.jpeg" alt="Description" class="float-right" />
+              Hi, i'm Marius a software engineer and this is my website. <br />
+              <br />
+              <br />
+              I'm from Pointe-Noire, Congo but i have been living in Dakar,
+              Senegal since 2018.
+              <br />
+              <br />
+              Daily I build products for my employer or myself and I love it. In
+              the engineering space, I'm passionate about creating well-crafted
+              software solutions that solve difficult problems. I'm interested
+              in distributed systems, databases, and web development.
+              <br />
+              <br />
+              I occasionally write technical articles about things I learn, for
+              me it's a better way to understand them and I find myself coming
+              back when I have to relearn something.
+              <br />
+              <br />
+              Outside of work, I like reading books, playing video games, and
+              spending quality time with friends.
+              <br />
+              <br />I love music I'm always listening to something, last year I
+              thought it would be nice to learn how to play so I bought a guitar
+              that I have barely touched since then ^^
+            </p>
           </div>
 
           <div>
             <h1>What I'm doing now</h1>
-            <span className="italic">Updated March 11th, 2023</span>
+            <span className="italic">Updated November 14th, 2024</span>
 
             <ul>
-              <li>Reading Happy Potter 6th book</li>
-              <li>Reading System Design Interview</li>
-              <li>Writing SpringBoot and Kubernetes</li>
+              <li>
+                Reading{" "}
+                <a
+                  href="https://www.amazon.com/Silo-1-Hugh-Howey/dp/2253183539"
+                  target="__blank"
+                >
+                  Silo
+                </a>
+              </li>
+              <li>
+                Building{" "}
+                <a
+                  href="https://github.com/niemet0502/shirabe"
+                  target="__blank"
+                >
+                  shirabe
+                </a>{" "}
+              </li>
+              <li>Learning Angular</li>
             </ul>
           </div>
 
           <div className="experiences-section">
-            <h1>Experiences</h1>
+            <h1>Professional Experiences</h1>
+            <div className="education__item">
+              <div className="flex">
+                <h3>
+                  Software Engineer at{" "}
+                  <a href="https://en.fleeti.co/" target="__blank">
+                    {" "}
+                    Fleeti{" "}
+                  </a>
+                </h3>
+              </div>
+              <p>
+                July 2020 – Current • Dakar, Senegal <br />I was one of the
+                early engineers to join the company, over my time here I have:
+              </p>
+              <ul>
+                <li>
+                  Led end-to-end feature development for our product resulting
+                  in faster feature delivery.
+                </li>
+                <li>
+                  Collaborated with cross-functional teams to design and
+                  implement features.
+                </li>
+                <li>
+                  Built from the ground-up the frontend app used by our
+                  technicians, cutting operation time by 60%.
+                </li>
+                <li>Contributed to code reviews. </li>
+                <li>
+                  Provided technical support, analysing and fixing bugs reported
+                  by internal users.{" "}
+                </li>
+                <li>
+                  Wrote documentation both technical for engineers and
+                  non-technical for users.
+                </li>
+              </ul>
+            </div>
+            <div className="education__item">
+              <div className="flex">
+                <h3>
+                  FullStack Software Engineer at{" "}
+                  <a href="https://6lex.co/" target="__blank">
+                    Agence 6lex
+                  </a>
+                </h3>
+              </div>
+              <p>January 2019 – June 2020 • Remote</p>
+              <ul>
+                <li>
+                  Developed and maintained web applications using React and
+                  TypeScript.
+                </li>
+                <li>
+                  Led the backend development of APIs ensuring scalability.
+                </li>
+                <li>Wrote automated tests for both frontend and backend.</li>
+                <li>
+                  Collaborated with cross-functional teams to design and
+                  implement features.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <ul className="experiences-list">
-              <li>
-                <div className="experience">
-                  <div
-                    className="flex align-items-center"
-                    style={{ marginBottom: "-25px" }}
-                  >
-                    <h1 className="flex align-items-center gap-10">
-                      Fleeti
-                      <span className="italic">· July 2020 - present</span>
-                    </h1>
-                  </div>
-
-                  <ul className="experience-postes  bullet">
-                    <li>
-                      <h3>Software Engineer</h3>
-                      <span className="italic">Dec 2020 - present</span>
-                      <ul>
-                        <li>
-                          Features implementation by working closely with
-                          stakeholders and the design team
-                        </li>
-                        <li>Build the frontend design system.</li>
-                        <li>Build the frontend platform</li>
-                        <li>
-                          Support product launches, write documentation, and fix
-                          bugs reported by internal users
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h3>Webmaster</h3>
-                      <span className="italic">July 2020 - Dec 2020</span>
-                      <ul>
-                        <li>Template customization to match the Design</li>
-                        <li>SEO optimization</li>
-                        <li>Performance optimization</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+          <div>
+            <h1>Education</h1>
+            <div className="education__item">
+              <div className="flex">
+                <h3>Master of science - Software Engineering</h3>
+                <span>Dakar, Senegal</span>
+              </div>
+              <span>Institut Supérieur d'informatique</span>
+            </div>
+            <div className="education__item">
+              <div className="flex">
+                <h3>Bachelor of science - Software Engineering</h3>
+                <span>Dakar, Senegal</span>
+              </div>
+              <span>Institut Supérieur d'informatique</span>
+            </div>
           </div>
         </div>
       </div>
