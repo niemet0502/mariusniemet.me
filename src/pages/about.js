@@ -75,6 +75,20 @@ const About = () => {
             <div className="education__item">
               <div className="flex">
                 <h3>
+                  FullStack Developer at{" "}
+                  <a href="https://socium.link/" target="__blank">
+                    {" "}
+                    Socium{" "}
+                  </a>
+                </h3>
+              </div>
+              <p>
+                December 2024 – Current • Dakar, Senegal <br />
+              </p>
+            </div>
+            <div className="education__item">
+              <div className="flex">
+                <h3>
                   Software Engineer at{" "}
                   <a href="https://en.fleeti.co/" target="__blank">
                     {" "}
@@ -83,8 +97,9 @@ const About = () => {
                 </h3>
               </div>
               <p>
-                July 2020 – Current • Dakar, Senegal <br />I was one of the
-                early engineers to join the company, over my time here I have:
+                July 2020 – December 2024 • Dakar, Senegal <br />I was one of
+                the early engineers to join the company, over my time here I
+                have:
               </p>
               <ul>
                 <li>
