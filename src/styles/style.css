@@ -884,7 +884,10 @@ pre[class*="language-"] {
   }
 
   .post-content__body img {
-    max-width: 100%;
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
