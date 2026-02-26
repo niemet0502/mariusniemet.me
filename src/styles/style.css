@@ -40,7 +40,8 @@ div {
 }
 
 div {
-  overflow: auto; /* Enable scrolling */
+  overflow: auto;
+  /* Enable scrolling */
 }
 
 div::-webkit-scrollbar {
@@ -101,7 +102,7 @@ div::-webkit-scrollbar-thumb {
   color: white;
 }
 
-.top-nav .navigation a:hover > .link {
+.top-nav .navigation a:hover>.link {
   text-decoration: underline;
 }
 
@@ -135,9 +136,11 @@ div::-webkit-scrollbar-thumb {
   margin-left: auto;
   margin-right: auto;
 }
+
 .mobile-navigation a span.page-number {
   font-size: 20px;
 }
+
 .mobile-navigation a span.link {
   font-size: 30px;
 }
@@ -146,6 +149,7 @@ div::-webkit-scrollbar-thumb {
   .top-nav-wrapper {
     justify-content: space-between;
   }
+
   .mobile-navigation-toggle {
     display: block;
   }
@@ -298,6 +302,7 @@ div::-webkit-scrollbar-thumb {
   .home-page-content {
     margin-left: 0px;
   }
+
   .home-page-content .content-container h1 {
     font-size: 38px;
     margin-top: 70px;
@@ -309,10 +314,12 @@ div::-webkit-scrollbar-thumb {
 .featured-blog-post {
   margin-top: 50px;
 }
+
 .blog-post a {
   color: white;
   text-decoration: none;
 }
+
 .blog-post {
   border-bottom: 1px solid rgb(118, 118, 116);
   align-items: center;
@@ -340,6 +347,7 @@ div::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .featured-projects__title {
   margin-bottom: 0px;
 }
@@ -420,6 +428,7 @@ div::-webkit-scrollbar-thumb {
     flex: 0 0 100%;
   }
 }
+
 /** Footer **/
 
 .page-footer {
@@ -456,8 +465,10 @@ div::-webkit-scrollbar-thumb {
 }
 
 .hero p {
-  word-wrap: break-word; /* For older browser support */
-  overflow-wrap: break-word; /* For modern browser support */
+  word-wrap: break-word;
+  /* For older browser support */
+  overflow-wrap: break-word;
+  /* For modern browser support */
   max-width: 850px;
 
   align-self: center;
@@ -513,6 +524,7 @@ h4 {
     flex-direction: column-reverse;
   }
 }
+
 /* .profile-picture {
   width: 180px;
   height: 180px;
@@ -606,11 +618,10 @@ ul.experiences-list {
   left: 15px;
   bottom: 0;
   width: 1px;
-  background-color: rgb(
-    118,
-    118,
-    116
-  ); /* Adjust this value to change the color of the line */
+  background-color: rgb(118,
+      118,
+      116);
+  /* Adjust this value to change the color of the line */
 }
 
 .bullet ul {
@@ -736,6 +747,7 @@ ul.experiences-list {
   .articles {
     flex-direction: column;
   }
+
   .article-container {
     flex-basis: 100%;
   }
@@ -756,12 +768,16 @@ ul.experiences-list {
 
 .blog-post-container {
   display: flex;
+  justify-content: center;
   min-height: 100vh;
-  gap: 6rem;
 }
 
 .post-content {
+  max-width: 1000px;
+  width: 100%;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post-content__head {
@@ -780,6 +796,7 @@ ul.experiences-list {
 }
 
 .post-content__body img {
+  display: block;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -788,6 +805,25 @@ ul.experiences-list {
 
 .post-content__body p:has(img) {
   text-align: center;
+}
+
+.post-content__body figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.post-content__body figure img {
+  display: block;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content__body figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgb(164, 162, 162);
+  font-style: italic;
 }
 
 .post-content__body a {
@@ -861,7 +897,8 @@ pre[class*="language-"] {
 
 .float-right {
   float: right;
-  margin-left: 16px; /* Add some space between text and image */
+  margin-left: 16px;
+  /* Add some space between text and image */
   /* width: 150px; Adjust as needed */
   height: auto;
   width: 300px;
