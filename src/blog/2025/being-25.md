@@ -2,7 +2,7 @@
 title: "I turned 25"
 date: "2026-02-26"
 description: ""
-published: false
+published: true
 author: "marius niemet"
 slug: i-turned-25
 categorie: note
@@ -10,26 +10,28 @@ categorie: note
 
 *This read and honestly, any other one would be nicer if you had [Juste une chose](https://www.youtube.com/watch?v=bmFH81C9YtM&list=RDbmFH81C9YtM&start_radio=1) by Kaky and since it's short you should have next [1er Avril](https://www.youtube.com/watch?v=PKVTWXnjK9Q&list=RDPKVTWXnjK9Q&start_radio=1) by Kaky playing in the background.*
 
-<figure>
-  <img src="/articles/2026/IMG_5636.jpg" alt="I turned 25" />
-</figure>
 
 A few days ago, I added another year to my life.
 
 Usually, I don’t really care about birthdays. They usually pass like any other day a few messages, a few calls, a quiet acknowledgment that time is moving. But this one felt different, I'm 25 years old now.
+<figure>
+  <img src="/articles/2026/IMG_5636.jpg" alt="I turned 25" />
+</figure>
 <br />
+
+
+I’ve always seen life as a timeline. From 1 to 25, you just go through life. Most of the time, you’re unconscious. You follow paths that were drawn before you even understood you were walking. You do what you feel like you have to do. People like to say that it stops at 20, but for me, it didn’t. From 20 to maybe 22, I was still vibing. Moving with the current. Experiencing life without fully confronting it.
+
+
+The second phase of life, from 25 to 50, is different. You can’t live the same way anymore. When you enter that period, responsibilities start to grow. Everything you do has an impact not only on you, but also on the people around you.
+
+Then comes the period from 50 to 75 if you’re still alive loool. That’s when some people look back. They think about their lives and wish they had done certain things during the 25 to 50 phase or they enjoy what they have took time to build and i don't necesseraly talk about money but relationship, family, love.
 
 <img src="/articles/2026/timeline.png" alt="I turned 25" />
 
 <br />
 
-I’ve always seen life as a timeline. From 1 to 25, you just go through life. Most of the time, you’re unconscious. You follow paths that were drawn before you even understood you were walking. You do what you feel like you have to do. People like to say that it stops at 20, but for me, it didn’t. From 20 to maybe 22, I was still vibing. Moving with the current. Experiencing life without fully confronting it.
-
-The second phase of life, from 25 to 50, is different. You can’t live the same way anymore. When you enter that period, responsibilities start to grow. Everything you do has an impact not only on you, but also on the people around you.
-
-Then comes the period from 50 to 75 if you’re still alive. That’s when some people look back. They think about their lives and wish they had done certain things during the 25 to 50 phase or they enjoy what they have took time to build and i don't necesseraly talk about money but relationship, family, love.
-
-I’m writing this article at 25 to reflect on what I did from 1 to 25, and to think about what I plan or hope to do in this second phase of my life. For these reflections, I will try to follow the same pattern that I follow while writing my year-end review reflections by analyzing different areas of my life: School and work, friendship, love, and family.
+I’m writing this article at 25 to reflect on what I did in the first phase, and to think about what I plan or hope to do in this second phase of my life. For these reflections, I will try to follow the same pattern that I follow while writing my year-end review reflections by analyzing different areas of my life: School and work, friendship, love, and family.
 
 ---
 ### School and work
@@ -83,6 +85,7 @@ Even now, I’m fortunate to have an extraordinary group of friends (Tito, Kofi,
 I also have other friends (Cléclé, Rodney) around me, and I would like to keep those relationships. Because, as the quote says, friends are the family we choose with intention.
 
 And I would like to keep choosing, every day, to be friends with these people.
+
 ---
 ### Love 
 
