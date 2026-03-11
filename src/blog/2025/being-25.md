@@ -59,11 +59,30 @@ I’ve also been fortunate in one important way: most of the things I’ve had t
 --- 
 ### Friendship
 
-*In the story of life, friends are the chapters that make it worth rereading.* 
+When I think about friendship, two quotes immediately come to mind.
 
-*Friends are the family we choose with intention.*
+The first one says: *“In the story of life, friends are the chapters that make it worth rereading.”*
+And the second: *“Friends are the family we choose with intention.”*
 
+And when I reflect on my life, I realize that I almost always see it through the lens of the people with whom I experienced it.
 
+I’ve been fortunate to meet incredible people. I have friends I’ve known since I was about ten years old Lune, Aïcha and Maxime. At this point, they’re not even just friends anymore; they’re almost like sisters to me.
+
+I also have a friend I’ve known since we were maybe six years old Raven. We’ve been friends for almost twenty years now.
+
+At one point, I also had an incredible group of friends (Alex, Analberto, Lopez, Ivan, Hurdy) with whom I did all the stupid things of my teenage years. Back then, we were convinced we would stay friends forever. But today, I couldn’t even tell you which country some of them are living in.
+
+And it’s not necessarily something sad or negative.
+
+That experience simply taught me that life sometimes separates people. And if you want to keep certain friendships or groups of friends, it requires intentional effort.
+
+Beyond those people, I’ve also met many others. Some were part of my life only for a certain period of time. But those friendships and relationships also helped shape the person I am today.
+
+Even now, I’m fortunate to have an extraordinary group of friends (Tito, Kofi, Phlo, Bertrand, Ulrich, Bachir) with whom I spend a lot of time doing random things, laughing, being silly.
+
+I also have other friends (Cléclé, Rodney) around me, and I would like to keep those relationships. Because, as the quote says, friends are the family we choose with intention.
+
+And I would like to keep choosing, every day, to be friends with these people.
 ---
 ### Love 
 
@@ -92,7 +111,7 @@ I also feel gratitude for the people I have met so far. I’ve encountered incre
 
 I’m also grateful for my parents. They are incredible parents who simply do the best they can with what they have.
 
-And all of this sometimes makes me feel like there might be someone or something greater watching over me, whether I want it or not.
+And all of this sometimes makes me feel like there might be someone  or something  greater watching over me, whether I want it or not.
 
 And for that, I am grateful.
 
