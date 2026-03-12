@@ -5,7 +5,7 @@ description: ""
 published: true
 author: "marius niemet"
 slug: i-turned-25
-categorie: note
+categorie: notes
 ---
 
 *This read and honestly, any other one would be nicer if you had [Juste une chose](https://www.youtube.com/watch?v=bmFH81C9YtM&list=RDbmFH81C9YtM&start_radio=1) by Kaky and since it's short you should have next [1er Avril](https://www.youtube.com/watch?v=PKVTWXnjK9Q&list=RDPKVTWXnjK9Q&start_radio=1) by Kaky playing in the background.*
@@ -78,7 +78,7 @@ And it’s not necessarily something sad or negative.
 
 That experience simply taught me that life sometimes separates people. And if you want to keep certain friendships or groups of friends, it requires intentional effort.
 
-Beyond those people, I’ve also met many others. Some were part of my life only for a certain period of time. But those friendships and relationships also helped shape the person I am today.
+Beyond those people, I’ve also met many others (Elenga). Some were part of my life only for a certain period of time. But those friendships and relationships also helped shape the person I am today.
 
 Even now, I’m fortunate to have an extraordinary group of friends (Tito, Kofi, Phlo, Bertrand, Ulrich, Bachir) with whom I spend a lot of time doing random things, laughing, being silly.
 
