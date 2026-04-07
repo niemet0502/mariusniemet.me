@@ -2,12 +2,17 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+import { SEO } from "../components/Seo";
 import config from "../utils/config";
 
 const About = () => {
+  const description =
+    "About Marius Niemet — Congolese Software Engineer based in Dakar, Senegal. Passionate about distributed systems, databases, and web development.";
+
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - About`} />
+      <Helmet title={`About — Marius Niemet`} />
+      <SEO customDescription={description} />
 
       <div className="page-content">
         <div className="aboutme-section">

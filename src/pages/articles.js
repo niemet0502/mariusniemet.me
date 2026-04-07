@@ -37,7 +37,7 @@ const Articles = () => {
 
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - Articles`} />
+      <Helmet title={`Articles — Marius Niemet`} />
       <SEO customDescription={description} />
 
       <div className="page-content">

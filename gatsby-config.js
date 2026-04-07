@@ -8,9 +8,10 @@ module.exports = {
       name: "Marius Niemet",
     },
     pathPrefix: "/",
-    description: "Software engineer. This is my little corner on the internet",
-    siteUrl: `https://www.yourdomain.tld`,
-    logo: "https://www.yourdomain.tld/logo.png",
+    description:
+      "Marius Niemet — Software Engineer from Congo based in Dakar, Senegal. Writing about distributed systems, backend development, web engineering, and life.",
+    siteUrl: `https://www.mariusniemet.me`,
+    logo: "https://www.mariusniemet.me/logo.png",
   },
   plugins: [
     {
@@ -51,6 +52,25 @@ module.exports = {
       options: {
         name: "assets",
         path: `${__dirname}/static/`,
+      },
+    },
+    /**
+     * SEO
+     */
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => "https://www.mariusniemet.me",
       },
     },
     /**

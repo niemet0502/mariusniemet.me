@@ -13,7 +13,7 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - Projects`} />
+      <Helmet title={`Projects — Marius Niemet`} />
       <SEO customDescription={description} />
 
       <div className="page-content">

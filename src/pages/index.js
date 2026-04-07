@@ -34,7 +34,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Helmet title={config.siteTitle} />
+      <Helmet title={`Marius Niemet — Software Engineer | Personal Website`} />
       <SEO />
       <div className="content">
         <LeftSideBar />

@@ -3,15 +3,20 @@ import React from "react";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import { SEO } from "../components/Seo";
 
 import { Helmet } from "react-helmet";
 import { books } from "../data/booksList";
 import config from "../utils/config";
 
 const Reads = () => {
+  const description =
+    "Books read by Marius Niemet — technical books, science-fiction, personal development, and manga recommendations.";
+
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - Reads`} />
+      <Helmet title={`Read Log — Marius Niemet`} />
+      <SEO customDescription={description} />
 
       <div className="page-content">
         <Hero

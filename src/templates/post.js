@@ -8,11 +8,11 @@ import config from "../utils/config";
 export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
 
-  const { html, frontmatter } = data.markdownRemark;
+  const { html, frontmatter, excerpt } = data.markdownRemark;
 
   return (
     <Layout>
-      <Helmet title={`${config.siteTitle} - ${frontmatter.title}`} />
+      <Helmet title={`${frontmatter.title} — Marius Niemet`} />
       <SEO postPath={frontmatter.slug} postNode={post} postSEO />
 
       <div className="page-content">
@@ -38,10 +38,13 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
+      excerpt(pruneLength: 160)
       frontmatter {
         categorie
         date(formatString: "YYYY-MM-DD")
         title
+        slug
+        description
       }
     }
   }
