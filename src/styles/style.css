@@ -1,9 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Lemonada&family=Lobster+Two&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Instrument+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Instrument+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+/* =============================================
+   THEME: CSS CUSTOM PROPERTIES
+   ============================================= */
 
+:root,
+[data-theme="dark"] {
+  --bg:              #171717;
+  --bg-nav:          #171717;
+  --bg-card:         #333333;
+  --bg-code:         #0000;
+
+  --text-primary:    #ffffff;
+  --text-secondary:  rgb(164, 162, 162);
+  --text-body:       #e6e6e6;
+
+  --border:          rgb(118, 118, 116);
+  --border-code:     rgb(49, 48, 53);
+
+  --link:            #ffffff;
+  --link-hover:      #ffffff;
+
+  --accent:          yellow;
+
+  --font-body:       "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-heading:    "Rock Salt", cursive;
+
+  --sidebar-icon:    #ffffff;
+  --code-text:       #d0d6e0;
+  --highlight-line:  rgb(116, 207, 136, 0.1);
+  --highlight-border:#74cf74;
+}
+
+[data-theme="light"] {
+  --bg:              #FFF6EB;
+  --bg-nav:          #FFF6EB;
+  --bg-card:         #f5ede0;
+  --bg-code:         #FCFCFA;
+
+  --text-primary:    #451507;
+  --text-secondary:  #7D5F54;
+  --text-body:       #5a3a2a;
+
+  --border:          #d9c5b5;
+  --border-code:     #E5E7EB;
+
+  --link:            #451507;
+  --link-hover:      #451507;
+
+  --accent:          #c0392b;
+
+  --font-body:       "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-heading:    "Rock Salt", cursive;
+
+  --sidebar-icon:    #451507;
+  --code-text:       #032F62;
+  --highlight-line:  rgba(192, 57, 43, 0.07);
+  --highlight-border:#c0392b;
+}
+
+/* =============================================
+   TRANSITION — smooth theme switching
+   ============================================= */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =============================================
+   BASE
+   ============================================= */
 .flex {
   display: flex;
 }
@@ -25,12 +97,11 @@
 }
 
 body {
-  background-color: #171717;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text-primary);
   padding: 0px;
   margin: 0px;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
@@ -41,7 +112,6 @@ div {
 
 div {
   overflow: auto;
-  /* Enable scrolling */
 }
 
 div::-webkit-scrollbar {
@@ -56,14 +126,16 @@ div::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
+/* =============================================
+   TOP NAV
+   ============================================= */
 .top-nav {
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   padding: 25px;
-  background-color: #171717;
-
+  background-color: var(--bg-nav);
   z-index: 2;
 }
 
@@ -72,7 +144,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .top-nav-wrapper {
-  border: 1px solid rgb(118, 118, 116);
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
 }
@@ -99,16 +171,16 @@ div::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: white;
+  color: var(--text-primary);
 }
 
-.top-nav .navigation a:hover>.link {
+.top-nav .navigation a:hover > .link {
   text-decoration: underline;
 }
 
 .top-nav .navigation a .page-number,
 .mobile-navigation a .page-number {
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
   font-size: 12px;
 }
 
@@ -117,10 +189,44 @@ div::-webkit-scrollbar-thumb {
   margin-top: 12px;
 }
 
-.mobile-navigation-toggle {
-  display: none;
+/* =============================================
+   NAV ACTIONS (theme toggle + hamburger)
+   ============================================= */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding-right: 12px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: 0;
+  flex-shrink: 0;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-card);
+  transform: rotate(15deg);
+}
+
+.mobile-navigation-toggle {
   padding-top: 11px;
+  display: none;
 }
 
 .mobile-navigation-toggle svg {
@@ -174,35 +280,38 @@ div::-webkit-scrollbar-thumb {
   }
 }
 
+/* =============================================
+   CONTENT LAYOUT
+   ============================================= */
 .content {
   margin-top: 105px;
   margin-left: 25px;
   margin-right: 25px;
-
   display: flex;
 }
 
 .mobile-navigation {
   height: 500px;
-  background-color: #171717;
+  background-color: var(--bg-nav);
   top: 100px;
   position: fixed;
   width: 100%;
 }
 
-/** Left nav **/
+/* =============================================
+   LEFT NAV / SIDEBAR
+   ============================================= */
 .left-nav {
   position: fixed;
   top: 25px;
   width: 90px;
-  border: 1px solid rgb(118, 118, 116);
+  border: 1px solid var(--border);
   height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: flex-end;
   align-items: center;
-
   z-index: 3;
 }
 
@@ -210,13 +319,12 @@ div::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   gap: 15px;
-
   margin-bottom: 30px;
 }
 
 .left-nav svg {
   font-size: 30px;
-  color: white;
+  color: var(--sidebar-icon);
 }
 
 @media screen and (max-width: 1180px) {
@@ -231,7 +339,9 @@ div::-webkit-scrollbar-thumb {
   }
 }
 
-/** Left nav **/
+/* =============================================
+   HOME PAGE CONTENT
+   ============================================= */
 .home-page-content {
   flex: 1;
   margin-left: 90px;
@@ -279,7 +389,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .home-page-content .content-container p {
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
 }
 
 @media screen and (max-width: 1180px) {
@@ -309,19 +419,20 @@ div::-webkit-scrollbar-thumb {
   }
 }
 
-/* home page blog post */
-
+/* =============================================
+   BLOG POSTS LIST
+   ============================================= */
 .featured-blog-post {
   margin-top: 50px;
 }
 
 .blog-post a {
-  color: white;
+  color: var(--link);
   text-decoration: none;
 }
 
 .blog-post {
-  border-bottom: 1px solid rgb(118, 118, 116);
+  border-bottom: 1px solid var(--border);
   align-items: center;
   justify-content: space-between;
 }
@@ -338,10 +449,12 @@ div::-webkit-scrollbar-thumb {
 .blog-post-link__date {
   font-weight: normal;
   font-size: 14px;
+  color: var(--text-secondary);
 }
 
-/* home page => featured projects */
-
+/* =============================================
+   PROJECT CARDS (HOME)
+   ============================================= */
 .featured-projects {
   display: flex;
   flex-wrap: wrap;
@@ -354,17 +467,17 @@ div::-webkit-scrollbar-thumb {
 
 .featured-projects h2 {
   padding-bottom: 10px;
-  border-bottom: 1px solid rgb(118, 118, 116);
+  border-bottom: 1px solid var(--border);
 }
 
 .project-card {
   flex: 0 0 48%;
   padding-bottom: 30px;
-  border-bottom: 1px solid rgb(118, 118, 116);
+  border-bottom: 1px solid var(--border);
 }
 
 .project-card .footer a {
-  color: white;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -381,12 +494,12 @@ div::-webkit-scrollbar-thumb {
 }
 
 .project-card .header span svg {
-  color: yellow;
+  color: var(--accent);
 }
 
 .project-card .header span {
   font-size: 15px;
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
 }
 
 .project-card p {
@@ -414,7 +527,7 @@ div::-webkit-scrollbar-thumb {
 .project-card .footer ul li:hover {
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-color: white;
+  text-decoration-color: var(--link);
 }
 
 @media screen and (max-width: 1180px) {
@@ -429,25 +542,24 @@ div::-webkit-scrollbar-thumb {
   }
 }
 
-/** Footer **/
-
+/* =============================================
+   FOOTER
+   ============================================= */
 .page-footer {
   margin-top: 150px;
   margin-bottom: 100px;
-
   padding-bottom: 20px;
-  border-bottom: 1px solid rgb(118, 118, 116);
-
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 15px;
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
 }
 
-/** page content **/
-
+/* =============================================
+   PAGE CONTENT (about, articles, etc.)
+   ============================================= */
 .page-content {
   margin-left: 25px;
   margin-right: 25px;
@@ -466,27 +578,21 @@ div::-webkit-scrollbar-thumb {
 
 .hero p {
   word-wrap: break-word;
-  /* For older browser support */
   overflow-wrap: break-word;
-  /* For modern browser support */
   max-width: 850px;
-
   align-self: center;
-
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
   font-size: 16px;
 }
 
 .aboutme-section {
   padding: 5px 25px;
   align-self: center;
-
   margin-top: 50px;
 }
 
 .profile-picture {
   float: right;
-  /* margin-top: -190px; */
   border-radius: 50%;
 }
 
@@ -495,7 +601,7 @@ div::-webkit-scrollbar-thumb {
 .experience p,
 .aboutme-section li {
   font-size: 16px;
-  color: #e6e6e6;
+  color: var(--text-body);
 }
 
 .education__item .flex {
@@ -511,7 +617,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: white;
+  color: var(--text-primary);
 }
 
 @media screen and (max-width: 680px) {
@@ -525,23 +631,16 @@ h4 {
   }
 }
 
-/* .profile-picture {
-  width: 180px;
-  height: 180px;
-} */
-
-/** reads page **/
-
+/* =============================================
+   READS PAGE
+   ============================================= */
 .books-container {
   display: flex;
-
   margin-top: 50px;
   flex-wrap: wrap;
   padding: 5px;
   justify-content: center;
   gap: 20px;
-
-  /* border: 1px solid green; */
 }
 
 .italic {
@@ -549,13 +648,10 @@ h4 {
 }
 
 .books-container .book-card {
-  /* border: 1px solid rgb(118, 118, 116); */
   width: 200px;
   margin: 0px;
-
   min-width: 200px;
-  background-color: rgb(51, 51, 51);
-
+  background-color: var(--bg-card);
   padding: 20px;
 }
 
@@ -565,8 +661,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -577,17 +672,19 @@ h4 {
 
 .books-container .book-card span {
   font-size: 14px;
-  color: #e6e6e6;
-
+  color: var(--text-body);
   text-align: center;
 }
 
 .books-container .book-card span.vote-counter {
-  background-color: rgb(51, 51, 51);
+  background-color: var(--bg-card);
   border-radius: 5px;
   padding: 1px 4px;
 }
 
+/* =============================================
+   EXPERIENCE / TIMELINE
+   ============================================= */
 .experiences-section ul.experience-postes {
   list-style: none;
 }
@@ -618,22 +715,19 @@ ul.experiences-list {
   left: 15px;
   bottom: 0;
   width: 1px;
-  background-color: rgb(118,
-      118,
-      116);
-  /* Adjust this value to change the color of the line */
+  background-color: var(--border);
 }
 
 .bullet ul {
   list-style-type: disc;
 }
 
-/** creations **/
-
+/* =============================================
+   PROJECTS PAGE
+   ============================================= */
 .projects-section {
   padding: 5px 25px;
   margin-top: 50px;
-
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -641,7 +735,6 @@ ul.experiences-list {
 
 .project-container {
   flex: 1;
-
   display: flex;
   justify-content: center;
 }
@@ -655,21 +748,18 @@ ul.experiences-list {
 .project {
   margin: 10px;
   max-width: 1152px;
-
   width: 100%;
-
   justify-content: space-between;
 }
 
 .project p {
   font-size: 14px;
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
 }
 
 .project img {
   width: 340px;
   height: 200px;
-
   border-radius: 5px;
   margin-top: auto;
   margin-bottom: auto;
@@ -679,7 +769,6 @@ ul.experiences-list {
 .project .footer ul {
   list-style: none;
   padding: 0px;
-
   margin-top: 0px;
 }
 
@@ -700,11 +789,11 @@ ul.experiences-list {
 .project h3 {
   margin: 0px;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgb(118, 118, 116);
+  border-bottom: 1px solid var(--border);
 }
 
 .project a {
-  color: white;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -724,10 +813,12 @@ ul.experiences-list {
 }
 
 .header a {
-  color: white;
+  color: var(--link);
 }
 
-/** writings page **/
+/* =============================================
+   ARTICLES / WRITINGS PAGE
+   ============================================= */
 .articles {
   width: 100%;
   max-width: 900px;
@@ -757,15 +848,16 @@ ul.experiences-list {
   text-transform: uppercase;
   padding-bottom: 10px;
   margin-bottom: 5px;
-  border-bottom: 1px solid rgb(118, 118, 116);
+  border-bottom: 1px solid var(--border);
 }
 
 .blog-post a:hover {
   text-decoration: underline;
 }
 
-/** single blog page **/
-
+/* =============================================
+   SINGLE BLOG POST
+   ============================================= */
 .blog-post-container {
   display: flex;
   justify-content: center;
@@ -781,7 +873,7 @@ ul.experiences-list {
 }
 
 .post-content__head {
-  border-bottom: 1px solid rgb(118, 118, 116);
+  border-bottom: 1px solid var(--border);
   padding-bottom: 50px;
 }
 
@@ -791,7 +883,7 @@ ul.experiences-list {
 
 .post-content p,
 .post-content span {
-  color: #e6e6e6;
+  color: var(--text-body);
   font-weight: normal;
 }
 
@@ -822,41 +914,46 @@ ul.experiences-list {
 .post-content__body figcaption {
   margin-top: 8px;
   font-size: 14px;
-  color: rgb(164, 162, 162);
+  color: var(--text-secondary);
   font-style: italic;
 }
 
 .post-content__body a {
-  color: white;
+  color: var(--link);
 }
 
+/* =============================================
+   CODE BLOCKS
+   ============================================= */
 code[class*="language-"],
 pre[class*="language-"] {
-  background-color: #0000 !important;
-  border: 1px solid rgb(49, 48, 53) !important;
+  background-color: var(--bg-code) !important;
+  border: 1px solid var(--border-code) !important;
   transition: box-shadow 0.2s ease 0s !important;
-
-  color: #d0d6e0 !important;
+  color: var(--code-text) !important;
 }
 
 .gatsby-highlight-code-line {
-  background-color: rgb(116, 207, 136, 0.1);
+  background-color: var(--highlight-line);
   display: block;
   margin-left: -1rem;
   margin-right: -1.5rem;
   padding-left: calc(1rem - 4px);
-  border-left: 4px solid #74cf74;
+  border-left: 4px solid var(--highlight-border);
 }
 
 .gatsby-highlight-code-line .gatsby-highlight-code-line {
   background-color: transparent;
 }
 
+/* =============================================
+   RIGHT SIDEBAR (post page)
+   ============================================= */
 .right-sidebar {
   width: 350px;
-  border-left: 1px solid rgb(118, 118, 116);
+  border-left: 1px solid var(--border);
   padding: 60px 30px;
-  color: #e6e6e6;
+  color: var(--text-body);
 }
 
 .right-sidebar img {
@@ -865,7 +962,7 @@ pre[class*="language-"] {
 }
 
 .right-sidebar a {
-  color: white;
+  color: var(--link);
 }
 
 @media screen and (max-width: 1180px) {
@@ -887,11 +984,11 @@ pre[class*="language-"] {
   .blog-post-container h1 {
     font-size: 32px;
   }
-
-
 }
 
-/** global responsive **/
+/* =============================================
+   GLOBAL RESPONSIVE
+   ============================================= */
 @media screen and (max-width: 680px) {
   body p {
     font-size: 18px;
@@ -901,8 +998,59 @@ pre[class*="language-"] {
 .float-right {
   float: right;
   margin-left: 16px;
-  /* Add some space between text and image */
-  /* width: 150px; Adjust as needed */
   height: auto;
   width: 300px;
+}
+
+/* =============================================
+   LIGHT THEME — ADDITIONAL OVERRIDES
+   ============================================= */
+
+/* Logo inversion for light theme */
+[data-theme="light"] .logo {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(330deg) brightness(0.4);
+}
+
+/* Keep logo normal in dark theme */
+[data-theme="dark"] .logo {
+  filter: none;
+}
+
+/* Light theme syntax highlighting overrides */
+[data-theme="light"] code[class*="language-"],
+[data-theme="light"] pre[class*="language-"] {
+  background-color: #FCFCFA !important;
+  border-color: #E5E7EB !important;
+  color: #032F62 !important;
+}
+
+[data-theme="light"] .token.keyword {
+  color: #D73A49 !important;
+}
+
+[data-theme="light"] .token.string,
+[data-theme="light"] .token.constant {
+  color: #032F62 !important;
+}
+
+[data-theme="light"] .token.comment {
+  color: #6A737D !important;
+}
+
+[data-theme="light"] .token.function {
+  color: #6F42C1 !important;
+}
+
+[data-theme="light"] .token.number {
+  color: #005CC5 !important;
+}
+
+/* Left sidebar icons in light mode */
+[data-theme="light"] .left-nav a svg {
+  color: var(--sidebar-icon);
+  transition: color 0.2s ease;
+}
+
+[data-theme="light"] .left-nav a:hover svg {
+  color: #c0392b;
 }
