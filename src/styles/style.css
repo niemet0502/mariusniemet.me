@@ -1054,3 +1054,24 @@ pre[class*="language-"] {
 [data-theme="light"] .left-nav a:hover svg {
   color: #c0392b;
 }
+
+/* =============================================
+   MAINTENANCE PAGE
+   ============================================= */
+.maintenance-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.maintenance-page__text {
+  font-family: "Rock Salt", cursive;
+  font-size: 20px;
+  color: #171717;
+  text-transform: lowercase;
+  margin: 0;
+}
